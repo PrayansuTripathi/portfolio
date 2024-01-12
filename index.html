@@ -10,6 +10,7 @@
     <link rel="stylesheet" href="assets/css/swiper-bundle.min.css">
 
     <link rel="stylesheet" href="assets/css/styles.css">
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
 
     <title>Responsive Portfolio Website</title>
 </head>
@@ -18,8 +19,8 @@
     <div id="header-section"></div>
     <script src="Snippets/header.js"></script>
 
-    <main class="main" >
-        <section class="home section" id="home">
+    <main class="main">
+        <section class="home section" id="home" data-aos="fade-in">
             <div class="home__container container grid">
                 <div class="home__content grid">
                     <div class="home__social">
@@ -72,12 +73,12 @@
                     </a>
                 </div>
             </div>
-            
+
         </section>
 
 
 
-        <section class="skills section" id="skills" >
+        <section class="skills section" id="skills" data-aos="fade-in">
             <h2 class="section__title">Skills</h2>
             <span class="section__subtitle">My technical level</span>
             <div class="skills__container container grid">
@@ -170,7 +171,7 @@
             </div>
         </section>
 
-        <section class="qualification section" >
+        <section class="qualification section" data-aos="fade-in">
             <h2 class="section__title">Qualification</h2>
             <span class="section__subtitle">My personal journey</span>
             <div class="qualification__container container">
@@ -262,8 +263,16 @@
 
 
     <script src="assets/js/swiper-bundle.min.js"></script>
-    
+
     <script src="assets/js/main.js"></script>
+
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+        AOS.init({
+            offset: 300,
+            duration: 1000
+        });
+    </script>
 </body>
 
 </html>
