@@ -1,0 +1,15 @@
+<portfolio>
+    <project>
+        <image>assets/img/Ecommerce.jpg</image>
+        <link>https://prayansutripathi.github.io/EcommerceWebsite/</link>
+        <title>Responsive Ecommerce Website</title>
+        <description>Experience smooth online shopping on our responsive ecommerce site crafted with
+            HTML, CSS, and JavaScript.</description>
+    </project>
+    <project>
+        <image>assets/img/onlineMeal.jpg</image>
+        <link>https://prayansutripathi.github.io/onlineMeal/</link>
+        <title>Online Meal</title>
+        <description>Website adaptable to all the devices, with and user interactions.</description>
+    </project>
+</portfolio>
