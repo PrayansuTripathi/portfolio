@@ -22,57 +22,28 @@
     <div id="header-section"></div>
     <script src="Snippets/header.js"></script>
 
-    <main>
-        <section class="portfolio section" id="portfolio">
+    <!-- <main> -->
+
+        <section class="section portfolio">
             <h2 class="section__title">Portfolio</h2>
-            <span class="section__subtitle">Most recent</span>
-            <div class="portfolio__container container swiper-container">
-                <div class="swiper-wrapper" >
-                    <div class="portfolio__content grid swiper-slide">
-                        <img src="assets/img/Ecommerce.jpg" alt="" class="portfolio__img">
-                        <div class="portfolio__data">
-                            <h3 class="portfolio__title">Responsive Ecommerce Website</h3>
-                            <p class="portfolio__descriotion">Experience smooth online shopping on our responsive
-                                ecommerce site crafted with HTML, CSS, and JavaScript.</p>
-                            <a href="https://prayansutripathi.github.io/EcommerceWebsite/" target="_blank"
-                                class="button button--flex button--small portfolio__button">
-                                Demo
-                                <i class="uil uil-arrow-right button__icon"></i>
-                            </a>
-                        </div>
-                    </div>
-                    <div class="portfolio__content grid swiper-slide">
-                        <img src="assets/img/onlineMeal.jpg" alt="" class="portfolio__img">
-                        <div class="portfolio__data">
-                            <h3 class="portfolio__title">Online Meal</h3>
-                            <p class="portfolio__descriotion">Website adaptable to all the devices, with and user
-                                interactions.</p>
-                            <a href="https://prayansutripathi.github.io/onlineMeal/" target="_blank"
-                                class="button button--flex button--small portfolio__button">
-                                Demo
-                                <i class="uil uil-arrow-right button__icon"></i>
-                            </a>
-                        </div>
-                    </div>
 
-                </div>
-                <div class="swiper-button-next">
-                    <i class="uil uil-angle-right-b swiper-portfolio-icon"></i>
-                </div>
-                <div class="swiper-button-prev">
-                    <i class="uil uil-angle-left-b swiper-portfolio-icon"></i>
-                </div>
-                <div class="swiper-pagination"></div>
-
+            <div id="filter-bar">
+                <button class="filter-btn" data-filter="all">All</button>
+                <button class="filter-btn" data-filter="web">Web</button>
+                <button class="filter-btn" data-filter="mobile">Mobile</button>
             </div>
+    
+           
+            <div id="projects-container"></div>
+            
+
         </section>
     </main>
 
     <div id="footer-section"></div>
     <script src="Snippets/footer.js"></script>
 
-
-
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
    
       <script src="assets/js/main.js"></script>
 

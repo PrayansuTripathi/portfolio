@@ -61,64 +61,96 @@ let swiper = new Swiper(".portfolio__container", {
   },
 });
 
-let swiper1 = new Swiper(".testimonial__container", {
-  loop: true,
-  grabCusrsor: true,
-  spaceBetween: 48,
-  pagination: {
-    el: ".swiper-pagination",
-    clickable: true,
-    dynamicBullets: true,
-  },
-  breakpoints: {
-    568: {
-      slidesPerView: 2,
-    },
-  },
-});
+function toggle(i) {
+  console.log(i);
 
-
-document.addEventListener('DOMContentLoaded', function () {
-  function loadXML() {
-    fetch('portfolio.xml') 
-      .then(response => response.text())
-      .then(xmlString => {
-       
-        parseXML(new DOMParser().parseFromString(xmlString, 'text/xml'));
-      })
-      .catch(error => console.error('Error loading XML:', error));
+  var element = document.getElementsByClassName('description')[i];
+  console.log(element);
+  if (element) {
+    // Toggle the 'display' property
+    element.style.display = (element.style.display === 'none' || element.style.display === '') ? 'block' : 'none';
   }
+}
 
- 
-  function parseXML(xml) {
-    document.getElementById('projects').innerHTML = '';
-    xml.querySelectorAll('project').forEach(project => {
-      var title = project.querySelector('title').textContent;
-      var description = project.querySelector('description').textContent;
-      var link = project.querySelector('link').textContent;
-      var image = project.querySelector('image').textContent;
+$(document).ready(function () {
+  function populateProjects() {
+    var $projectsContainer = $('#projects-container');
 
-      var projectHTML = `<div class="portfolio__content grid swiper-slide">
-      <img src="${image}" alt="" class="portfolio__img">
-      <div class="portfolio__data">
-          <h3 class="portfolio__title">${title}</h3>
-          <p class="portfolio__descriotion">${description}</p>
-          <a href="${link}" target="_blank"
-              class="button button--flex button--small portfolio__button">
-              Demo
-              <i class="uil uil-arrow-right button__icon"></i>
-          </a>
-      </div>
-  </div>`;
+    $.ajax({
+      type: "GET",
+      url: "portfolio.xml",
+      dataType: "xml",
+      success: function (xml) {
+        var projects = [];
 
-      document.getElementById('projects').innerHTML += projectHTML;
+        $(xml).find('project').each(function (index) {
+          console.log($(this))
+          var title = $(this).find('title').text();
+          var description = $(this).find('description').text();
+          var image = $(this).find('image').text();
+          var link = $(this).find('link').text();
+          var name = $(this).find('name').text();
+          var category = $(this).find('category').text().toLowerCase();
+          var projectHTML = `
+          
+                      <div>
+                      <div class="${category} bg-danger project">
+                      <img src="${image}" alt="${title}">
+                      <h3>${title}</h3>
+                      <a class="readmore" onclick="toggle(${index})">readmore</a>
+                      <p class="description" style="display: none;">${description}</p><br>
+                      <a href="${link}" target="_blank"
+                          class="button button--flex button--small portfolio__button">
+                          Demo
+                          <i class="uil uil-arrow-right button__icon"></i>
+                      </a>
+                     </div>
+                      </div>
+                      
+                  `;
+
+          projects.push(projectHTML);
+        });
+
+        $projectsContainer.html(projects.join(''));
+      },
+      error: function (xhr, status, error) {
+        console.error("Error fetching XML:", status, error);
+      }
     });
   }
 
-  loadXML();
-});
+  populateProjects();
 
-AOS.init({
-  offset: 300, 
-  duration: 1000
+  $('.filter-btn').on('click', function () {
+    var filterValue = $(this).attr('data-filter');
+
+    // Show all projects if 'All' is selected
+    if (filterValue === 'all') {
+      $('.project').show();
+    } else {
+      // Hide projects that don't match the selected category
+      $('.project').hide().filter('.' + filterValue).show();
+    }
+  });
+
+  $('.project').on('click', function () {
+    $(this).toggleClass('expanded');
+  });
+
+  function validateForm() {
+    var name = document.getElementById('name').value;
+    var email = document.getElementById('email').value;
+    var message = document.getElementById('message').value;
+
+    
+    if (name.trim() === '' || email.trim() === '' || message.trim() === '') {
+      alert('Please fill in all fields.');
+      return false;
+    }
+
+    
+
+    return true;
+  }
 });
