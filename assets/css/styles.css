@@ -205,24 +205,6 @@ img {
   font-size: 1.2rem;
 }
 
-/* .nav__close {
-  position: absolute;
-  right: 1.3rem;
-  bottom: 0.5rem;
-  font-size: 1.5rem;
-  cursor: pointer;
-  columns: var(--first-color);
-}
-
-.nav__close:hover {
-  color: var(--first-color-alt);
-} */
-
-/* show menu */
-.show-menu {
-  bottom: 0;
-}
-
 /* Active link */
 
 /* Change background header */
@@ -281,10 +263,6 @@ img {
 .home__description {
   margin-bottom: var(--mb-2);
 }
-
-/* .home__scroll {
-  display: none;
-} */
 
 .home__scroll-button {
   columns: var(--first-color);
@@ -694,6 +672,11 @@ img {
   padding: .25rem .5rem .5rem 0;
 }
 
+#msg{
+color: #61b752;
+display: block;
+margin-top: -20px;
+}
 /*==================== FOOTER ====================*/
 .footer {
   padding-top: 2rem;
@@ -709,6 +692,10 @@ img {
 .footer__bg {
   background-color: var(--first-color);
   padding: 2rem 0 3rem;
+  text-align: center;
+    justify-content: center;
+    display: flex;
+    color: #000;
 }
 
 .footer__title {
@@ -722,8 +709,8 @@ img {
 
 .footer__links {
   display: flex;
-  flex-direction: column;
-  row-gap: 1.5rem;
+  flex-direction: row;
+  column-gap: 1.5rem;
 }
 
 .footer__link:hover {
@@ -750,7 +737,7 @@ img {
 .footer__subtitle,
 .footer__link,
 .footer__social {
-  color: #fff
+  color: black;
 }
 
 
@@ -820,7 +807,7 @@ section {
   border-radius: 10px;
 }
 
-.portfolio{
+.portfolio {
   padding: 5rem;
 }
 
@@ -879,11 +866,12 @@ section {
   .about__container,
   .skills__container,
   .portfolio__content,
-  .project__container,
-  .footer__container {
+  .project__container{
     grid-template-columns: 1fr 1fr;
   }
-
+  .footer__container {
+    grid-template-rows: 1fr 1fr;
+  }
   .qualification__sections {
     display: grid;
     grid-template-columns: .6fr;
@@ -893,9 +881,7 @@ section {
   .portfolio__content {
     column-gap: 1rem;
   }
-  .portfolio {
-    padding: 1rem;
-}
+
   .contact__container>div {
     display: flex;
     justify-content: space-between;
@@ -934,6 +920,11 @@ section {
 }
 
 
+@media only screen and (max-width:400px) {
+  .portfolio {
+    padding: 2rem;
+}
+}
 
 .active {
   color: #6E57E2;
