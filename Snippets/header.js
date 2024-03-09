@@ -1,7 +1,7 @@
 document.getElementById('header-section').innerHTML = `
 <header class="header" id="header">
 <nav class="nav container">
-    <a href="#" class="nav__logo">Prayansu Tripathi</a>
+    <a href="index.html" class="nav__logo">Prayansu Tripathi</a>
     <div class="nav__menu" id="nav-menu">
         <ul class="nav__list grid">
             <li class="nav__item">

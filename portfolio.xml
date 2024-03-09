@@ -4,10 +4,9 @@
     <project>
         <title>Responsive Ecommerce Website</title>
         <link>https://prayansutripathi.github.io/EcommerceWebsite/</link>
-        <description>Experience smooth online shopping on our responsive ecommerce site crafted with
-            HTML, CSS, and JavaScript.</description>
+        <description>Discover seamless online shopping on our responsive ecommerce site, meticulously crafted with HTML, CSS, and JavaScript. Browse a wide range of products with ease and enjoy a smooth shopping experience on any device, whether you're on your computer, tablet, or phone.</description>
         <image>assets/img/Ecommerce.jpg</image>
-        <category>web</category>
+        <category>mobile</category>
     </project>
     <project>
         <link>https://prayansutripathi.github.io/onlineMeal/</link>
@@ -16,6 +15,36 @@
         <image>assets/img/onlineMeal.jpg</image>
         <category>Mobile</category>
     </project>
+    <project>
+        <link>https://prayansutripathi.github.io/crypto-Portfolio/</link>
+        <title>Cryptocurrency landing page</title>
+        <description>Check out our Cryptocurrency landing page! We've brought a stunning Figma design to life with code that works perfectly on any device. Enjoy a beautiful and responsive experience, whether you're browsing on your computer, tablet, or phone.</description>
+        <image>assets/img/crypto.jpg</image>
+        <category>Mobile</category>
+    </project>
+    <project>
+        <link>https://prayansutripathi.github.io/ToDoList/</link>
+        <title>ToDo List in Javascript</title>
+        <description>ToDo List website Built with HTML, CSS, and JavaScript, this tool offers a simple yet effective solution for task management. Add, complete, and delete tasks with ease, all within a clean and intuitive interface designed to enhance productivity.</description>
+        <image>assets/img/todo.jpg</image>
+        <category>web</category>
+    </project>
     
+    <project>
+        <link>https://password-generator-silk-nine-45.vercel.app/</link>
+        <title>password Generator</title>
+        <description>Welcome to the Password Generator website! Built with React.js and leveraging useState, useRef, useEffect, and useCallback hooks, this tool creates strong passwords with customizable length and complexity. Utilizing functional programming to minimize code repetition, it offers a user-friendly interface for generating secure passwords effortlessly</description>
+        <image>assets/img/password.jpg</image>
+        <category>web</category>
+    </project>
 
+    <project>
+        <link>https://password-generator-silk-nine-45.vercel.app/</link>
+        <title>Guess The Number Game</title>
+        <description>Welcome to 'Guess The Number Game'! A JavaScript-powered challenge where players guess a randomly generated number within a chosen range. Enjoy intuitive interface, dynamic number generation, and customizable difficulty. Test your skills, receive hints, and aim for the highest score. Play now and see if you can guess right!</description>
+        <image>assets/img/guessNumber.jpg</image>
+        <category>web</category>
+    </project>
+    
+   
 </projects>

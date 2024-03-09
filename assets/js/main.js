@@ -95,7 +95,8 @@ $(document).ready(function () {
           
                       <div>
                       <div class="${category} bg-danger project">
-                      <img src="${image}" alt="${title}">
+                      <a  href="${link}" target="_blank"><img src="${image}" alt="${title}"></a>
+                      
                       <h3>${title}</h3>
                       <a class="readmore" onclick="toggle(${index})">readmore</a>
                       <p class="description" style="display: none;">${description}</p><br>
@@ -134,7 +135,7 @@ $(document).ready(function () {
     }
   });
 
-  
 
-  
+
+
 });
